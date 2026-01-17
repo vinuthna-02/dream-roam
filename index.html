@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>DreamRoam - Smart Travel & Tour Booking Website</title>
+</head>
+<body>
+    <nav>
+        <div class="nav__header">
+            <div class="nav__logo">
+                <a href="#home">Dream<span>Roam</span></a>
+            </div>
+            <div class="nav__menu__btn" id="menu-btn">
+                <i class="ri-menu-3-line"></i>
+            </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#package">Packages</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav__btns">
+            <button id="themeToggle" class="theme-btn" aria-label="Toggle dark mode">🌙</button>
+            <button class="btn">Register</button>
+        </div>
+    </nav>
+
+    <header class="section__container header__container" id="home">
+        <div class="header__content">
+            <h1><span>Let's</span> Create Memorable Journey</h1>
+            <p class="section__description">
+                Embark on an unforgettable adventure with us! Discover breathtaking
+                destinations, create lasting memories, and make every journey
+                remarkable.
+            </p>
+            <form id="searchForm">
+              <!-- Replace the 3 input__group divs with: -->
+              <div class="input__group">
+                  <label for="location">Destination</label>
+                  <input type="text" id="location" name="location" placeholder="Lakshadweep🌊" required 
+                        aria-label="Destination search" />
+              </div>
+              <div class="input__group">
+                  <label for="date">Travel Date</label>
+                  <input type="date" id="date" name="date" aria-label="Travel date" />
+              </div>
+              <div class="input__group">
+                  <label for="price">Budget</label>
+                  <input type="number" id="price" name="price" placeholder="42000" min="1000" 
+                        aria-label="Budget in rupees" />
+              </div>
+
+                <button type="button" class="btn" id="aiSuggest">
+                    ✨ Suggest Trip
+                </button>
+                <button type="submit" class="btn" aria-label="Search trips">
+                    <i class="ri-search-line"></i>
+                </button>
+            </form>
+        </div>
+        <div class="header__image">
+            <img src="assets/picture1.jpeg" alt="Destination 1"/>
+            <img src="assets/picture2.jpeg" alt="Destination 2"/>
+            <img src="assets/picture3.jpeg" alt="Destination 3"/>
+            <img src="assets/picture4.png" alt="aeroplane"/>
+        </div>
+    </header>
+
+    <section class="section__container choose__container" id="about">
+        <span class="section-emoji map" aria-hidden="true">🗺️</span>
+        <div class="choose__image">
+            <img src="assets/choose.jpeg" alt="flight"/>
+        </div>
+        <div class="choose__content">
+            <p class="section__subheader">Why Choose Us?</p>
+            <h2 class="section__header">Plan Your Trip <span>With Us</span></h2>
+            <ul class="choose__list" role="list">
+                <li>
+                    <span><i class="ri-verified-badge-fill" aria-hidden="true"></i></span>
+                    <div>
+                        <h4>Best Price Guarantee</h4>
+                        <p>
+                            We ensure you get the most competitive rates for your travel
+                            plans, making your dream destinations affordable.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <span><i class="ri-calendar-fill" aria-hidden="true"></i></span>
+                    <div>
+                        <h4>Flexible Booking</h4>
+                        <p>
+                            Experience the ease of flexible booking options tailored to suit
+                            your schedule and preferences.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <span><i class="ri-road-map-fill" aria-hidden="true"></i></span>
+                    <div>
+                        <h4>Live Track Maps</h4>
+                        <p>
+                            Navigate your adventure with our personalized track maps
+                            designed for seamless travel experiences.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section__container popular__container" id="package">
+        <p class="section__subheader">Famous Destinations</p>
+        <h2 class="section__header">Our Popular <span>Destinations</span></h2>
+        <i class="ri-compass-3-line popular__decor" aria-hidden="true"></i>
+        <i class="ri-map-pin-5-fill popular__decor pin" aria-hidden="true"></i>
+
+        <!-- Swiper Slider -->
+        <div class="swiper popular__swiper">
+            <div class="swiper-wrapper">
+                <!-- Goa -->
+                <div class="swiper-slide">
+                    <div class="popular__card">
+                        <img src="assets/goa.jpeg"
+                            alt="Goa beach with colorful umbrellas and clear blue ocean water" />
+                        <div class="popular__content">
+                            <div class="popular__rating">
+                                <span><i class="ri-star-fill" aria-hidden="true"></i></span> 4.8 (120) 😍
+                            </div>
+                            <h4>Goa</h4>
+                            <p><span>Rs. 22,000/-</span> Per Person</p>
+                            <div class="popular__card__footer">
+                                <div><span><i class="ri-time-line" aria-hidden="true"></i></span> 3 Days</div>
+                                <div><span><i class="ri-group-3-fill" aria-hidden="true"></i></span> 20+</div>
+                                <div><span><i class="ri-map-pin-2-fill" aria-hidden="true"></i></span> India</div>
+                            </div>
+                            <button class="btn book-btn">Book Now</button>
+                            <div class="favorite" aria-label="Add to favorites">
+                                <i class="ri-heart-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manali -->
+                <div class="swiper-slide">
+                    <div class="popular__card">
+                        <img src="assets/manali.jpeg"
+                            alt="Snow-capped mountains and pine forests of Manali" />
+                        <div class="popular__content">
+                            <div class="popular__rating">
+                                <span><i class="ri-star-fill" aria-hidden="true"></i></span> 4.7 (95) ❄️
+                            </div>
+                            <h4>Manali</h4>
+                            <p><span>Rs. 26,000/-</span> Per Person</p>
+                            <div class="popular__card__footer">
+                                <div><span><i class="ri-time-line" aria-hidden="true"></i></span> 3 Days</div>
+                                <div><span><i class="ri-group-3-fill" aria-hidden="true"></i></span> 20+</div>
+                                <div><span><i class="ri-map-pin-2-fill" aria-hidden="true"></i></span> India</div>
+                            </div>
+                            <button class="btn book-btn">Book Now</button>
+                            <div class="favorite" aria-label="Add to favorites">
+                                <i class="ri-heart-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Jaipur -->
+                <div class="swiper-slide">
+                    <div class="popular__card">
+                        <img src="assets/jaipur.jpeg"
+                            alt="Majestic pink palaces and forts of Jaipur city" />
+                        <div class="popular__content">
+                            <div class="popular__rating">
+                                <span><i class="ri-star-fill" aria-hidden="true"></i></span> 4.5 (78) 🏰
+                            </div>
+                            <h4>Jaipur</h4>
+                            <p><span>Rs. 18,000/-</span> Per Person</p>
+                            <div class="popular__card__footer">
+                                <div><span><i class="ri-time-line" aria-hidden="true"></i></span> 3 Days</div>
+                                <div><span><i class="ri-group-3-fill" aria-hidden="true"></i></span> 20+</div>
+                                <div><span><i class="ri-map-pin-2-fill" aria-hidden="true"></i></span> India</div>
+                            </div>
+                            <button class="btn book-btn">Book Now</button>
+                            <div class="favorite" aria-label="Add to favorites">
+                                <i class="ri-heart-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kerala -->
+                <div class="swiper-slide">
+                    <div class="popular__card">
+                        <img src="assets/kerala.jpeg"
+                            alt="Traditional houseboats cruising through Kerala backwaters" />
+                        <div class="popular__content">
+                            <div class="popular__rating">
+                                <span><i class="ri-star-fill" aria-hidden="true"></i></span> 4.9 (140) 🌴
+                            </div>
+                            <h4>Kerala</h4>
+                            <p><span>Rs. 29,000/-</span> Per Person</p>
+                            <div class="popular__card__footer">
+                                <div><span><i class="ri-time-line" aria-hidden="true"></i></span> 3 Days</div>
+                                <div><span><i class="ri-group-3-fill" aria-hidden="true"></i></span> 20+</div>
+                                <div><span><i class="ri-map-pin-2-fill" aria-hidden="true"></i></span> India</div>
+                            </div>
+                            <button class="btn book-btn">Book Now</button>
+                            <div class="favorite" aria-label="Add to favorites">
+                                <i class="ri-heart-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ladakh -->
+                <div class="swiper-slide">
+                    <div class="popular__card">
+                        <img src="assets/ladakh.jpeg"
+                            alt="Rugged high-altitude landscapes of Ladakh with prayer flags" />
+                        <div class="popular__content">
+                            <div class="popular__rating">
+                                <span><i class="ri-star-fill" aria-hidden="true"></i></span> 4.6 (68) 🏔️
+                            </div>
+                            <h4>Ladakh</h4>
+                            <p><span>Rs. 34,000/-</span> Per Person</p>
+                            <div class="popular__card__footer">
+                                <div><span><i class="ri-time-line" aria-hidden="true"></i></span> 3 Days</div>
+                                <div><span><i class="ri-group-3-fill" aria-hidden="true"></i></span> 20+</div>
+                                <div><span><i class="ri-map-pin-2-fill" aria-hidden="true"></i></span> India</div>
+                            </div>
+                            <button class="btn book-btn">Book Now</button>
+                            <div class="favorite" aria-label="Add to favorites">
+                                <i class="ri-heart-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <section class="section__container explore__container">
+        <div class="explore__image">
+            <img src="assets/explore.jpeg"
+                alt="Dream travel destination with ocean waves and tropical landscape" />
+        </div>
+        <div class="explore__content">
+            <p class="section__subheader">Explore With Us</p>
+            <h2 class="section__header">
+                Choose Dream Destinations For <span>Explore World</span>
+            </h2>
+            <p class="section__description">
+                Discover a world of wonders! Select from our curated list of dream
+                destinations and start your journey to explore breathtaking
+                landscapes, vibrant cultures, and unforgettable experiences.
+            </p>
+            <div class="explore__btn">
+                <button class="btn">About Us</button>
+            </div>
+            <div class="explore__grid">
+                <div>
+                    <h4>14</h4>
+                    <p>Years<br>Experience</p>
+                </div>
+                <div>
+                    <h4>67+</h4>
+                    <p>Destinations<br>Celebrations</p>
+                </div>
+                <div>
+                    <h4>320+</h4>
+                    <p>Happy<br>Customers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section__container client__container">
+        <span class="section-emoji camera" aria-hidden="true">📸</span>
+        <p class="section__subheader">What Our Clients Say?</p>
+        <h2 class="section__header">Client <span>Testimonials</span></h2>
+        
+        <div class="client__card active">
+            <img src="assets/client1.jpeg"
+                alt="Portrait of James Abraham, Travel Blogger" />
+            <div class="client__content">
+                <h4>James Abraham</h4>
+                <h5>Travel Blogger</h5>
+                <p>
+                    This travel platform turned my bucket list dreams into reality! The
+                    booking process was seamless, and their team provided excellent
+                    guidance on must-visit spots. Every step felt effortless!
+                </p>
+            </div>
+        </div>
+        
+        <div class="client__card">
+            <img src="assets/client2.jpeg"
+                alt="Portrait of Sophia Lee, Software Engineer" />
+            <div class="client__content">
+                <h4>Sophia Lee</h4>
+                <h5>Software Engineer</h5>
+                <p>
+                    Traveling with this service was a delight! The flexible booking
+                    options gave me freedom to plan at my own pace. Absolutely wonderful!
+                </p>
+            </div>
+        </div>
+        
+        <div class="client__card">
+            <img src="assets/client3.jpeg"
+                alt="Portrait of Michael Roberts, Photographer" />
+            <div class="client__content">
+                <h4>Michael Roberts</h4>
+                <h5>Photographer</h5>
+                <p>
+                    As a photographer, finding picturesque locations is key. This platform
+                    exceeded expectations and helped discover incredible hidden gems!
+                </p>
+            </div>
+        </div>
+        
+        <div class="client__btns">
+            <button class="btn" id="prev" aria-label="Previous testimonial">
+                <i class="ri-arrow-left-line"></i>
+            </button>
+            <button class="btn" id="next" aria-label="Next testimonial">
+                <i class="ri-arrow-right-line"></i>
+            </button>
+        </div>
+    </section>
+
+    <section class="section__container subscribe__container" id="contact">
+        <span class="section-emoji bag" aria-hidden="true">🧳</span>
+        <h2 class="section__header">
+            Subscribe To Get The Latest News <span>About Us</span>
+        </h2>
+        <p class="section__description">
+            Stay updated with the latest travel deals, destination highlights, and
+            exclusive offers. Subscribe now and never miss out on exciting updates!
+        </p>
+        <form action="/" method="POST">
+            <input type="email" placeholder="Your Email" required aria-label="Email address" />
+            <button type="submit" class="btn">Subscribe</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="section__container footer__container">
+            <div class="footer__col">
+                <div class="footer__logo">
+                    <a href="#home">DreamRoam</a>
+                </div>
+                <p>
+                    Explore the world with us! Connect through our social media
+                    channels, find quick links to essential resources, and access 24/7
+                    support to make your travel planning effortless.
+                </p>
+                <ul class="footer__socials" role="list">
+                    <li><a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a></li>
+                    <li><a href="#" aria-label="Twitter"><i class="ri-twitter-fill"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Services</h4>
+                <ul class="footer__links" role="list">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#package">Destinations</a></li>
+                    <li><a href="#package">Packages</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Follow Us</h4>
+                <div class="footer__insta">
+                    <img src="assets/follow1.jpeg"
+                        alt="Travel destination Instagram post 1" />
+                    <img src="assets/follow2.jpeg"
+                        alt="Travel destination Instagram post 2" />
+                    <img src="assets/follow3.jpeg"
+                        alt="Travel destination Instagram post 3" />
+                    <img src="assets/follow4.jpeg"
+                        alt="Travel destination Instagram post 4" />
+                    <img src="assets/follow5.jpeg"
+                        alt="Travel destination Instagram post 5" />
+                    <img src="assets/follow6.jpeg"
+                        alt="Travel destination Instagram post 6" />
+                </div>
+            </div>
+            <div class="footer__col">
+                <h4>Contact Info</h4>
+                <ul class="footer__links" role="list">
+                    <li>
+                        <a href="tel:+91787654321">
+                            <span><i class="ri-phone-fill" aria-hidden="true"></i></span> +91 0787654321
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://maps.google.com/?q=Hyderabad,India">
+                            <span><i class="ri-map-pin-fill" aria-hidden="true"></i></span> Hyderabad, India
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:info@dreamroam.com">
+                            <span><i class="ri-mail-fill" aria-hidden="true"></i></span> info@dreamroam.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bar">
+            Copyright © 2026 DreamRoam - Smart Travel & Tour Booking. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+    
+    <script>
+        // Theme Toggle
+        const toggle = document.getElementById("themeToggle");
+        toggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark");
+            toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+        });
+
+        // Initialize Swiper when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            const swiper = new Swiper('.popular__swiper', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

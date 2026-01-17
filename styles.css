@@ -1,0 +1,1539 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-color: #ffa03f;
+  --primary-color-dark: #e08b37;
+  --text-dark: #020617;
+  --text-light: #1e293b;
+  --extra-light: #f3f4f6;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 6rem 1.5rem;
+}
+
+.section__subheader {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.section__header {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 3.25rem;
+  letter-spacing: 0.5px;
+}
+
+.section__header span {
+  color: var(--primary-color);
+}
+
+.section__description {
+  color: var(--text-light);
+  line-height: 1.75rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.popular__card .book-btn {
+  margin-top: 1.5rem;   /* 🔥 space above Book Now */
+}
+
+.btn:hover {
+  background-color: var(--primary-color-dark);
+  transform: translateY(-3px);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+ul {
+  list-style: none;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  position: fixed;
+  isolation: isolate;
+  width: 100%;
+  z-index: 9;
+}
+
+.nav__header {
+  padding: 0.75rem 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+}
+
+.nav__logo a {
+  font-size: 2.4rem;
+  font-weight: 1000;
+  color: var(--white);
+}
+
+.nav__menu__btn {
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.nav__links {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--primary-color);
+  transition: transform 0.5s ease;
+  z-index: -1;
+  transform: translateY(-100%);
+
+}
+
+.nav__links.open {
+  transform: translateY(0);
+}
+
+.nav__links a {
+  font-weight: 500;
+  color: var(--white);
+}
+
+.nav__btns {
+  display: none;
+}
+
+.header__container {
+  display: grid;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.header__content h1 {
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.header__content h1 span {
+  text-decoration: underline;
+  text-decoration-color: var(--primary-color);
+}
+
+.header__content .section__description {
+  text-align: center;
+}
+
+.header__content form {
+  margin-top: 4rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.header__content .input__group {
+  flex: 1 0 125px;
+  display: grid;
+  gap: 10px;
+}
+
+.header__content label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.header__content input {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  background-color: transparent;
+  color: var(--text-light);
+}
+
+.header__content input::placeholder {
+  color: var(--text-light);
+}
+
+.header__content .btn {
+  padding: 13px 15px;
+  font-size: 1.75rem;
+  border-radius: 1rem;
+}
+
+.header__image {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 90px;
+}
+
+
+.header__image img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header__image img:nth-child(1) {
+  grid-area: 1/1/4/3;
+}
+
+.header__image img:nth-child(2) {
+  grid-area: 4/1/7/3;
+}
+
+.header__image img:nth-child(3) {
+  grid-area: 2/3/6/6;
+}
+
+.header__image img:nth-child(4) {
+  position: absolute;
+  top: -2rem;
+  right: 5rem;
+  height: 10rem;
+  width: unset;
+  object-fit: contain;
+  aspect-ratio: 1;
+  box-shadow: none;
+}
+
+.choose__container {
+  display: grid;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.choose__image img {
+  max-width: 475px;
+  margin-inline: auto;
+  border-radius: 2rem;
+  box-shadow: 30px -30px 0px rgba(0, 0, 0, 0.1);
+}
+
+.choose__list {
+  margin-top: 4rem;
+  display: grid;
+  gap: 3rem;
+}
+
+.choose__list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.choose__list li span {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 2rem;
+  color: var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+
+.choose__list li h4 {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.choose__list li p {
+  color: var(--text-light);
+}
+
+.popular__container {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-bottom: 1rem;
+  background: #f9fafb;   /* 🔥 very light contrast */
+
+}
+
+.popular__container h2,
+.popular__container .section__subheader {
+  position: relative;
+  z-index: 6;
+}
+
+
+.popular__container > *:not(.map-dots-visible) {
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------- Popular section decorative blobs ---------- */
+.popular__container::before,
+.popular__container::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  filter: blur(50px);
+  z-index: 0;
+  opacity: 0.35;
+}
+
+/* Top-right blob */
+.popular__container::before {
+  top: -120px;
+  right: -120px;
+  background: radial-gradient(circle, #ffa03f, transparent 70%);
+}
+
+/* Bottom-left blob */
+.popular__container::after {
+  bottom: -120px;
+  left: -120px;
+  background: radial-gradient(circle, #60a5fa, transparent 70%);
+}
+
+
+.popular__bg {
+  position: absolute;
+  left: 75%;
+  top: 0;
+  transform: translate(-65%, -50%) rotate(-135deg);
+  height: 12rem;
+  width: unset;
+  aspect-ratio: 1;
+  object-fit: contain;
+
+}
+
+.swiper {
+  padding-block: 4rem;
+  width: 100%;
+}
+
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.popular__card {
+  position: relative;       /* 🔥 MOST IMPORTANT FIX */
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  background: var(--white);
+  overflow: hidden;
+  transition: 0.3s;
+  border: 1px solid rgba(0, 0, 0, 0.08);     /* 🔥 outline */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18); /* 🔥 stronger shadow */
+
+}
+
+
+.popular__card:hover {
+  transform: translateY(-12px) scale(1.01);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+
+}
+
+.popular__card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+
+.popular__content {
+  position: relative;
+  padding: 2rem 2rem 1.5rem;
+  background: var(--white);
+  transform: translateY(-40px);   /* 🔥 reference effect */
+  border-radius: 1.5rem;
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+
+.popular__rating {
+  position: absolute;
+  top: -1.2rem;
+  left: 2rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--white);
+  border-radius: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.popular__rating span {
+  font-size: 1.2rem;
+  color: goldenrod;
+}
+
+.popular__content h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.popular__content p {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.popular__content p span {
+  color: var(--primary-color);
+}
+
+
+.popular__card__footer div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-light);
+}
+
+.popular__card__footer span {
+  font-size: 1.2rem;
+}
+
+.explore__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* side by side */
+  align-items: center;
+  gap: 4rem; /* 👈 THIS CREATES SPACE BETWEEN IMAGE & TEXT */
+  overflow: hidden;
+  position: relative;
+  overflow: visible;
+}
+
+
+.explore__image img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 2rem;
+  object-fit: cover;
+  margin-right: 2rem; /* 👈 IMPORTANT */
+  box-shadow: -25px -25px 0px rgba(0, 0, 0, 0.12);
+}
+
+
+.explore__content .section__description {
+  padding-block: 2rem;
+}
+
+.explore__content .btn {
+  padding: 1.25rem 2.5rem;
+  font-size: 1.5rem;
+  border-radius: 1.25rem;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.explore__grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.explore__grid h4 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.explore__grid p {
+  color: var(--text-light);
+}
+
+.client__container {
+  position: relative;
+  isolation: isolate;
+}
+/* Client images near testimonials */
+.client__images {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.client__images img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.client__images img:hover {
+  transform: translateY(-8px);
+}
+
+.client__bg {
+  position: absolute;
+  left: 75%;
+  top: 0;
+  transform: translate(-65%, -35%) rotate(-45deg);
+  height: 12rem;
+  width: unset;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.client__card {
+  position: relative;
+  isolation: isolate;
+  margin-top: 4rem;
+  display: none;
+  animation: fadeEffect 1s;
+}
+
+.client__card.active {
+  display: grid;
+  grid-template-columns: 320px 1fr; /* IMAGE | CONTENT */
+  align-items: center;
+  gap: 0;
+}
+
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.client__card img {
+  width: 800px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  box-shadow: 25px -25px 0px rgba(0, 0, 0, 0.12);
+}
+
+.client__content {
+  padding: 2.5rem;
+  background-color: var(--white);
+  border-left: 5px solid var(--primary-color);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  margin-left: -4rem; /* 🔥 OVERLAP EFFECT */
+  border-radius: 1.5rem;
+  z-index: 2;
+}
+
+
+.client__content h4 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.client__content h5 {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+.client__content p {
+  color: var(--text-light);
+}
+
+.client__btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.client__btns .btn {
+  padding: 10px 12px;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  background-color: var(--white);
+  border: 2px solid var(--primary-color);
+  border-radius: 100%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.client__btns .btn:hover {
+  color: var(--white);
+  background-color: var(--primary-color);
+}
+
+.subscribe__container :is(.section__header, .section__description) {
+  max-width: 600px;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.subscribe__container form {
+  max-width: 500px;
+  margin-inline: auto;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 160, 63, 0.5);
+  border-radius: 10px;
+}
+
+.subscribe__container input {
+  width: 100%;
+  padding-inline: 1rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: transparent;
+}
+
+.subscribe__container input::placeholder {
+  color: var(--white);
+}
+
+footer {
+  background-color: var(--primary-color);
+}
+
+.footer__container {
+  display: grid;
+  gap: 4rem 2rem;
+}
+
+.footer__logo {
+  margin-bottom: 2rem;
+}
+
+.footer__logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.footer__col p {
+  margin-bottom: 2rem;
+  color: var(--white);
+  line-height: 1.75rem;
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer__socials a {
+  padding: 6px 10px;
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  background-color: var(--white);
+  border-radius: 100%;
+}
+
+.footer__socials a:hover {
+  color: var(--white);
+  background-color: var(--primary-color-dark);
+}
+
+.footer__col h4 {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.footer__links {
+  display: grid;
+  gap: 1rem;
+}
+
+.footer__links a {
+  color: var(--white);
+}
+
+.footer__links span {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.footer__insta {
+  display: grid;
+  grid-template-columns: repeat(3, 80px); /* 🔥 reference size */
+  gap: 0.9rem;
+}
+
+.footer__insta img {
+  width: 80px;          /* EXACT DISPLAY SIZE */
+  height: 75px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+
+.footer__col__flex img:hover {
+  transform: scale(1.05); /* small zoom effect on hover */
+}
+
+.footer__bar {
+  padding: 1rem;
+  color: var(--white);
+  text-align: center;
+}
+
+@media (width > 768px) {
+  .client__content {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-left: 2rem;
+    width: 75%;
+  }
+.client__container {
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+
+.client__images {
+  justify-content: flex-start;
+}
+
+
+  .client__btns {
+    margin-top: 2rem;
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+@media (width > 768px) {
+  nav {
+    position: static;
+    padding: 1.5rem 1rem;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .nav__header {
+    flex: 1;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .nav__logo a {
+    font-size: 2.4rem;
+    color: var(--text-dark);
+  }
+
+  .nav__logo a span {
+    color: var(--primary-color);
+  }
+
+  .nav__menu__btn {
+    display: none;
+  }
+
+  .nav__links {
+    position: static;
+    width: fit-content;
+    padding: 0;
+    flex-direction: row;
+    background-color: transparent;
+    transform: none !important;
+  }
+
+  .nav__links a {
+    color: var(--text-dark);
+  }
+
+  .nav__links a:hover {
+    color: var(--primary-color);
+  }
+
+  .nav__btns {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .header__container {
+    padding-top: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    isolation: isolate;
+  }
+
+  .header__content {
+    position: relative;
+    padding-bottom: 10rem;
+  }
+
+  .header__content :is(h1, .section__description) {
+    text-align: left;
+  }
+
+  .header__content form {
+    position: absolute;
+    width: max-content;
+    padding: 1.5rem;
+    margin: 0;
+    bottom: 0;
+    border-radius: 1.5rem;
+    backdrop-filter: blur(5px);
+    z-index: 10;
+  }
+
+  .choose__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .explore__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .explore__content {
+    grid-area: 1/1/2/2;
+  }
+
+  .client__btns {
+    position: absolute;
+    top: 15rem;
+    right: 1rem;
+    margin-top: 0;
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .footer__col:nth-child(1) {
+    grid-column: 1/3;
+  }
+
+  .footer__col:nth-child(2) {
+    grid-column: 3/4;
+  }
+
+  .footer__col:nth-child(3) {
+    grid-column: 4/6;
+  }
+
+  .footer__col:nth-child(4) {
+    grid-column: 6/8;
+  }
+}
+
+@media (width > 1024px) {
+  .header__image {
+    gap: 1.5rem;
+    grid-auto-rows: 90px;
+  }
+}
+/* ---------------- Mobile adjustment for Popular Destinations ---------------- */
+@media (max-width: 768px) {
+  .popular__card {
+    height: auto; /* makes card flexible on smaller screens */
+  }
+
+  .popular__card img {
+    height: 180px; /* fixes image height for better fit */
+  }
+}
+/* Airplane above Popular Destinations */
+.popular__featured {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.popular__featured .popular__airplane {
+  width: 150px;          /* size of the airplane */
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 1rem;   /* space between airplane and heading */
+  animation: floatAirplane 3s ease-in-out infinite;
+}
+
+@keyframes floatAirplane {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Add extra padding to swiper to prevent overlap */
+.popular__swiper {
+  padding-top: 3rem;
+}
+.theme-btn {
+  font-size: 1.4rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* ---------------- Dark Mode Base ---------------- */
+body.dark {
+  background-color: #1e293b; /* dark page background */
+  color: #f3f4f6;            /* default text */
+  transition: background-color 0.3s, color 0.3s;
+  font-smooth: always;
+}
+
+/* ---------------- Navbar ---------------- */
+body.dark nav {
+  background-color: #0f172a;
+  transition: background-color 0.3s;
+}
+
+/* ---------------- Theme Toggle ---------------- */
+#themeToggle {
+  margin-right: 2.5rem; /* more space from register/login buttons */
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+body.dark #themeToggle {
+  color: #f8fafc;
+}
+
+/* ---------------- Buttons ---------------- */
+body.dark .btn {
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark .btn:hover {
+  background-color: #2563eb;
+}
+
+/* ---------------- Cards & Containers ---------------- */
+body.dark .popular__card,
+body.dark .choose__content,
+body.dark .explore__content,
+body.dark .client__content,
+body.dark .subscribe__container,
+body.dark .header__content form {
+  background-color: #2c3e50;
+  color: #f3f4f6;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* subtle shadow for depth */
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+/* Text inside cards */
+body.dark .popular__card p,
+body.dark .choose__list li p,
+body.dark .explore__grid p,
+body.dark .client__content p {
+  color: #d1d5db;
+}
+
+/* ---------------- Forms & Inputs ---------------- */
+body.dark input,
+body.dark .subscribe__container input {
+  color: #f8fafc;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid #374151;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+body.dark input:focus,
+body.dark .subscribe__container input:focus {
+  outline: none;
+  border-color: #60a5fa;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* ---------------- Footer ---------------- */
+body.dark .footer__container,
+body.dark footer {
+  background-color: #0f172a;
+  color: #f3f4f6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark .footer__links a,
+body.dark .footer__socials a {
+  color: #f3f4f6;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+body.dark .footer__socials a {
+  background-color: #1e293b;
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+}
+
+/* ---------------- Headings, Paragraphs, Links ---------------- */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p,
+body.dark span,
+body.dark a {
+  color: #f3f4f6;
+  transition: color 0.3s;
+}
+
+body.dark a:hover {
+  color: #60a5fa;
+}
+
+/* ---------------- Optional: Subtle Hover Effects ---------------- */
+body.dark .popular__card:hover,
+body.dark .choose__content:hover,
+body.dark .explore__content:hover,
+body.dark .client__content:hover,
+body.dark .subscribe__container:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .btn:hover {
+  background-color: #2563eb;
+}
+
+.popular__card__footer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  align-items: center;
+}
+
+
+.popular__card__footer .btn {
+  width: 100%;
+  margin-top: 1rem 0;
+}
+
+
+/* Heart icon position – top right of card */
+.popular__card {
+  position: relative; /* REQUIRED */
+}
+
+.popular__card .favorite {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: gray;
+  z-index: 10;
+}
+
+.popular__card .favorite.active {
+  color: red;
+}
+
+.popular__card .favorite:hover {
+  transform: scale(1.15);
+}
+
+/* ================= DARK MODE – POPULAR CARD FINAL OVERRIDES ================= */
+
+/* Card shell */
+body.dark .popular__card {
+  background: #1f2937;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* Image more visible */
+body.dark .popular__card img {
+  filter: contrast(1.1);
+}
+
+/* Content block – reduce size & blend */
+body.dark .popular__content {
+  background: #1f2937;
+  padding: 1.5rem 1.5rem 1.2rem; /* 👈 smaller text block */
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Rating pill */
+body.dark .popular__rating {
+  background: #111827;
+  color: #e5e7eb;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+/* Text color tuning */
+body.dark .popular__content h4 {
+  color: #f1f3f5;
+}
+
+body.dark .popular__content p {
+  color: #cbd5e1;
+}
+
+/* Footer icons */
+body.dark .popular__card__footer span {
+  color: #93c5fd;
+}
+/* 🔥 Fix white background behind Popular Destinations in dark mode */
+body.dark .popular__container {
+  overflow: visible;
+  background: #0f172a; /* same dark tone as footer/nav */
+}
+
+body.dark .popular__container::before {
+  background: radial-gradient(circle, #3b82f6, transparent 70%);
+  opacity: 0.25;
+}
+
+body.dark .popular__container::after {
+  background: radial-gradient(circle, #22d3ee, transparent 70%);
+  opacity: 0.25;
+}
+
+/* ================= Decorative Icons for Empty Spaces ================= */
+
+.popular__decor {
+  position: absolute;
+  top: -0.5rem;          /* 👈 ABOVE heading */
+  left: 50%;
+  transform: translateX(-50%);
+  
+  font-size: 4.5rem;
+  color: rgba(255, 160, 63, 0.53);
+
+  z-index: 5;           /* 👈 ABOVE heading & cards */
+  pointer-events: none;
+
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* Second icon slightly offset */
+.popular__decor.pin {
+  top: 2.1rem;
+  left: 62%;
+  font-size: 3.8rem;
+  opacity: 0.85;
+  animation-duration: 8s;
+}
+
+/* Floating animation */
+@keyframes floatSlow {
+  0% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -10px); }
+  100% { transform: translate(-50%, 0); }
+}
+
+body.dark .popular__decor {
+  color: rgba(255, 255, 255, 0.52);
+}
+
+
+.nav__logo {
+  position: relative; /* Make it a reference for pseudo-element */
+  display: inline-block;
+}
+
+/* World watermark behind TravelToor */
+.nav__logo::after {
+  content: "🌍";          
+  position: absolute;
+  left: -40px;             /* slightly left of the text */
+  top: 50%;                /* vertically centered */
+  transform: translateY(-50%); /* perfect center */
+  font-size: 4rem;       /* adjust size as needed */
+  opacity: 0.50;           /* subtle, clean effect */
+  pointer-events: none;    /* won’t block clicks */
+  z-index: 0;              /* behind the text */
+}
+
+
+
+.explore__container::before {
+  content: "✈️";
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  font-size: 3.5rem;
+  opacity: 0.9;
+  pointer-events: none;
+  animation: floatSlow 6s infinite;
+  z-index: 1;
+}
+
+
+.explore__container::after {
+  content: "";
+  position: absolute;
+  bottom: 10%;
+  left: 8%;
+  width: 260px;
+  height: 120px;
+  border: 2px dashed rgba(255, 160, 63, 0.4);
+  border-radius: 50%;
+  transform: rotate(-12deg);
+  z-index: 0;
+}
+
+/* Dark mode */
+body.dark .explore__container::after {
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.choose__container,
+.subscribe__container {
+  position: relative;
+  overflow: visible;
+  min-height: 280px
+}
+
+
+/* ================= SECTION EMOJIS ================= */
+
+.section-emoji {
+  position: absolute;
+  font-size: 4.2rem;
+  opacity: 0.80;
+  z-index: 0;
+  pointer-events: none;
+  animation: floatEmoji 7s ease-in-out infinite;
+}
+
+/* Individual positioning */
+.section-emoji.map {
+  top: 7.7rem;
+  left: 87%;
+}
+
+.section-emoji.camera {
+  top: 5.5rem;
+  left: 40%;
+}
+
+.section-emoji.bag {
+  bottom: 19.5rem;
+  left: 20%;
+}
+
+/* Floating animation */
+@keyframes floatEmoji {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/* Dark mode visibility */
+body.dark .section-emoji {
+  opacity: 0.50;
+}
+@media (max-width: 768px) {
+  .popular__card {
+    margin: 1rem;
+  }
+
+  .popular__content {
+    transform: translateY(0);
+  }
+
+  .client__card.active {
+    grid-template-columns: 1fr;
+  }
+
+  .client__card img {
+    width: 100%;
+    height: 200px !important;
+  }
+}
+
+/* ================= FIX DARK MODE VISIBILITY ================= */
+
+/* 1️⃣ HEADER FORM – Location / Date / Price text */
+body.dark .header__content label {
+  color: #e5e7eb; /* brighter label */
+}
+
+body.dark .header__content input {
+  color: #ffffff !important;
+  background: rgba(255,255,255,0.1);
+}
+
+body.dark .header__content input::placeholder {
+  color: #cbd5e1;
+}
+
+/* Reduce block darkness so image shows through */
+body.dark .header__content form {
+  background-color: rgba(15, 23, 42, 0.65); /* 👈 KEY FIX */
+  backdrop-filter: blur(6px);
+}
+
+/* 2️⃣ POPULAR CARDS – 3 Days / 20+ / India */
+body.dark .popular__card__footer div {
+  color: #f1f5f9; /* brighter text */
+  font-weight: 500;
+}
+
+body.dark .popular__card__footer span {
+  color: #93c5fd; /* icon color */
+}
+
+/* 3️⃣ POPULAR CARD CONTENT – allow image to show */
+body.dark .popular__content {
+  background: rgba(15, 23, 42, 0.75); /* 👈 SAME FEEL AS LIGHT MODE */
+  backdrop-filter: blur(6px);
+}
+
+/* 4️⃣ Rating pill clarity */
+body.dark .popular__rating {
+  background: rgba(17, 24, 39, 0.9);
+  color: #f9fafb;
+}
+
+/* 5️⃣ Card image visibility boost */
+body.dark .popular__card img {
+  filter: brightness(1.05) contrast(1.1);
+}
+/* ================= DARK TEXT VISIBILITY FIX ================= */
+
+/* Labels like Location, Date, Price */
+body.dark label {
+  color: #f1f5f9;   /* light but strong */
+}
+
+/* Small dark texts (Lakshadweep, dates, prices) */
+body.dark .header__content span,
+body.dark .header__content p,
+body.dark .header__content input {
+  color: #f8fafc;
+}
+
+/* Popular cards info: 3 Days, 20+, India */
+body.dark .popular__card__footer div,
+body.dark .popular__card__footer span {
+  color: #e5e7eb;
+  font-weight: 500;
+}
+
+/* Headings that were black in light mode */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5 {
+  color: #f9fafb;
+}
+
+/* Extra safety for any leftover dark text */
+body.dark .text-dark {
+  color: #f8fafc !important;
+}
+
+/* Price emphasis */
+body.dark .popular__content p span {
+  color: #60a5fa; /* highlight price */
+}
+
+/* Keep contrast clean */
+body.dark .section__subheader {
+  color: #93c5fd;
+}
+
+
+/* ================= ALL YOUR EXISTING CSS ... ================= */
+
+/* ... your current dark mode rules ... */
+
+/* 🔥 ADD NEW BLENDING RULES HERE - LAST SECTION */
+body.dark {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #111827 100%);
+}
+
+/* Cards - Frosted glass effect */
+body.dark .popular__card {
+  background: rgba(31, 41, 55, 0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+body.dark .popular__content {
+  background: rgba(31, 41, 55, 0.92);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Header form */
+body.dark .header__content form {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Client content */
+body.dark .client__content {
+  background: rgba(44, 62, 80, 0.90);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: 4px solid #60a5fa;
+}
+
+/* Popular container */
+body.dark .popular__container {
+  background: linear-gradient(145deg, #0f172a 0%, rgba(30, 41, 59, 0.8) 100%);
+}
+
+/* Rating badges */
+body.dark .popular__rating {
+  background: rgba(17, 24, 39, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Buttons */
+body.dark .btn {
+  background: rgba(59, 130, 246, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Subscribe form */
+body.dark .subscribe__container form {
+  background: rgba(59, 130, 246, 0.15);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+/* ================= LOADING + ACCESSIBILITY ================= */
+
+.btn.loading {
+  pointer-events: none;
+  opacity: 0.7;
+  position: relative;
+  color: transparent;
+}
+
+.btn.loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+/* ================= ACCESSIBILITY ================= */
+.btn:focus,
+input:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+/* ==================== FINAL FIXES ==================== */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.nav__links.open {
+  transform: translateY(0);
+}
+
+.btn:focus, input:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
