@@ -1,4 +1,4 @@
-# DreamRoam - Smart Travel Booking Website
+# TravelToor - Smart Travel Booking Website
 
 A modern, responsive single-page travel booking website with frosted glass dark mode, interactive carousels, and smooth animations built with HTML, CSS, and JavaScript.
 
@@ -39,7 +39,7 @@ To view this website, you need:
 Once the website loads, you'll see:
 
 ```
---- DreamRoam Travel Website ---
+--- TravelToor Travel Website ---
 Dark Mode Toggle (navbar button)
 Left/Right Popular Destinations Carousel
 Previous/Next Testimonial Buttons
@@ -55,7 +55,7 @@ Mobile Menu (small screens)
 Suggest Trip    Search
 
 --- Navbar Menu ---
-DreamRoam    Home  About  Packages  Contact    Register
+TravelToor    Home  About  Packages  Contact    Register
 
 Enter any section or just scroll down!
 ```
